@@ -3,11 +3,43 @@
  */
 package quiz1sistemasg2;
 
+import java.util.Scanner;
+
 public class App {
     
+     
 
+
+    
+      
     public static void main(String[] args) {
+    try {
         
+        String tipoVehiculo = 0;
+        int horasParqueadero = 0;
+        String esEstudiante = 0;
+       int montoParqueadero;
+        int precioParqueadero;
+
+     Scanner sc = new Scanner(System.in);
+     //Preguntarle al usuario en que vehiculo vino
+     System.out.println("Ingrese C para carro. Ingrese M para moto. Ingrese B para bicicleta.");
+      tipoVehiculo = sc.nextLine();
+      //Preguntarle al usuario cuantas horas permanecio en el parqueadero
+      System.out.println("Cuantas horas estuvo en el parqueadero");
+      horasParqueadero = sc.nextInt();
+      sc.nextLine();
+      //Solicitarle al usuario si es estudiante de
+      System.out.println("Ingrese 1 si eres estudiante. Ingrese 2 para no");
+      esEstudiante = sc.nextLine(); 
+        
+        
+      
+     
+
+    } catch (Exception e) {
+        
+    }    
        
 
     }
@@ -22,7 +54,43 @@ public class App {
     */
     //------------------------------------------------------------------
     
+    public int calcularValorHora(String tipoVehiculo, int horasParqueadero) {
+        try {
+            tipoVehiculo = Integer.parseInt(tipoVehiculo);
+              switch (tipoVehiculo) {
+                case "C":
+                return  5000;
+                    break;
 
+                    break;
+              }
+              switch (tipoVehiculo) {
+                case "M":
+                return 3000;
+            
+                    
+                       break;
+              
+                default:
+                    break;
+              }
+              switch (tipoVehiculo) {
+                case "B":
+                    return 1000;
+                    break;
+              
+                default:
+                    break;
+              }
+            return -1;
+
+            if (horasParqueadero > 3) {
+            
+                
+            }
+        } catch (Exception e) {
+          return -1;
+        }
 
     //------------------------------------------------------------------
 
@@ -36,7 +104,7 @@ public class App {
         * Controlar errores retornando -1
     */
     //------------------------------------------------------------------
-    
+    public int calcularDescuento( esEstudiante, horasParqueadero);
 
 
     //------------------------------------------------------------------
@@ -53,4 +121,4 @@ public class App {
 
 
     //------------------------------------------------------------------
-}
+} }
